@@ -6,3 +6,6 @@ plugins {
     `jacoco-report-aggregation`
 }
 
+allprojects { plugins.withId("jacoco") {
+    the<JacocoPluginExtension>().toolVersion = JacocoPlugin.DEFAULT_JACOCO_VERSION }
+}
