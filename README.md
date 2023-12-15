@@ -4,6 +4,11 @@ With Android Gradle Plugin version 8.2 is not possible to choose a jacoco versio
 applying the `com.android.application` plugin and it always forces jacoco to use `0.8.8` regardless
 of the configuration.
 
+For example, by setting this in the root: 
+`allprojects { plugins.withId("jacoco") { the<JacocoPluginExtension>().toolVersion = "0.8.11" } }`
+The outcome from previous and current AGP versions is different.
+
+
 AGP 8.1, try to force jacoco to version 0.8.11. Successful ✅
 [Build scan](https://scans.gradle.com/s/xmnjluekuowyu/dependencies?dependencies=jacoco&expandAll)
 ![agp81.png](img/agp81.png)
